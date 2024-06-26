@@ -20,18 +20,21 @@
 
     <form>
         <label for="nome"> Nome:</label>
-        <input type="text" id="nome">
+        <input type="text" id="nome" onkeyup="validaNome()">
+        <div id="txtNome"></div>
             <br>
 
          <label for="email"> Email:</label>
-        <input type="email" id="email">
+        <input type="email" id="email" onkeyup="validaEmail()">
+        <div id="txtEmail"></div>
              <br>
 
          <label for="assunto"> Assunto:</label>
-        <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+        <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+        <div id="txtAssunto"></div>
         <br>
         <br>
-        <button>Enviar</button>   
+        <button onclick="enviar()">Enviar</button>   
         
         <h2>Endereço</h2>
 
@@ -44,11 +47,14 @@
          style="border:0;" 
          allowfullscreen="" 
          loading="lazy" 
-         referrerpolicy="no-referrer-when-downgrade"></iframe>
+         referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
     </form>
 
     <footer>
         <p>© 2024 Contato. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
